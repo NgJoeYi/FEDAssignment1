@@ -40,9 +40,10 @@ nav a {
     text-decoration: none; /* Remove link underlines */
     color: #ffffff; /* Set the text color for navigation links */
     transition: color 0.3s ease; /* Add a smooth color transition on hover */
-    &:hover {
-        color: #ff8800; /* Change the color on hover */
-    }
+}
+
+nav a:hover {
+    color: #ff8800; /* Change the color on hover */
 }
 
 footer {
@@ -141,9 +142,10 @@ footer {
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none; /* remove underline */
-    &:hover {
-        background-color: #ff8800 /* when hover change to this color. standard for almost all of the buttons for this website*/
-    }
+}
+
+.custom-button-homepage:hover {
+    background-color: #ff8800; /* when hover change to this color. standard for almost all of the buttons for this website */
 }
 
 /* Flex container for side-by-side layout --------------------*/
@@ -289,12 +291,12 @@ label { /* this is my 'news and update' */
     border-radius: 20px;
     font-size: 10px; /* Increase font size for better visibility */
     padding: 8px;
-    &:hover {
-        background-color: #333;
-        color: #fff;
-    }
 }
 
+.subscribe-inputs button:hover {
+    background-color: #333;
+    color: #fff;
+}
 
 
 @media (max-width: 600px) {
@@ -610,9 +612,10 @@ label { /* this is my 'news and update' */
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
-    &:hover {
-        background-color: #ff8800
-    }
+}
+
+.custom-button:hover {
+    background-color: #ff8800
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -690,11 +693,11 @@ label { /* this is my 'news and update' */
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
 
-    /* Additional styles for hover effect */
-    &:hover {
-        background-color: #ff8800; /* Change background color on hover */
-    }
+/* Additional styles for hover effect */
+.button-link-menu:hover {
+    background-color: #ff8800; /* Change background color on hover */
 }
 
 @media (max-width: 600px) {
@@ -817,13 +820,11 @@ label { /* this is my 'news and update' */
     margin-right: auto;
     border-radius: 8px;
     overflow: hidden;
-
-    /* Hover effect */
-    &:hover {
-        transform: scale(1.05);
-    }
 }
 
+.button-deals:hover {
+    transform: scale(1.05);
+}
 
 /* Image inside the deal button */
 .button-deals img {
@@ -864,10 +865,10 @@ label { /* this is my 'news and update' */
     font-weight: bold;
     text-decoration: none;  /* remove underline */
     margin-top: 10px;
-    &:hover {
-        background-color: #ff8800; /* Change background color on hover */
-    }
-    
+}
+
+.button-link-deals:hover {
+    background-color: #ff8800; /* Change background color on hover */
 }
 
 /* Media queries for responsiveness */
