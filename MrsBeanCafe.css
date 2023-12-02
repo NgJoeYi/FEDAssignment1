@@ -413,7 +413,7 @@ label { /* this is my 'news and update' */
     have to be smaller than those on the deals page
     otherwise, there are still some classes that are shared 
     between both class for efficiency  */
-.button-deals {
+.button-class-menu {
     /* Flex container settings */
     display: flex;
     flex-direction: column;
@@ -440,12 +440,12 @@ label { /* this is my 'news and update' */
     overflow: hidden;
 }
 
-.button-deals:hover {
+.button-class-menu:hover {
     transform: scale(1.05);
 }
 
 /* Image inside the deal button */
-.button-deals img {
+.button-class-menu img {
     width: 250px; /* Set a specific width */
     height: 300px; /* Set a specific height */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
@@ -551,7 +551,7 @@ label { /* this is my 'news and update' */
 }
 
 @media (max-width: 600px) {
-    .button-deals img {
+    .button-class-menu img {
         width: 180px;
         height: 200px;
     }
