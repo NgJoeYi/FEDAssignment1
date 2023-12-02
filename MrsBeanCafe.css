@@ -407,6 +407,63 @@ label { /* this is my 'news and update' */
     color: #000000;
 }
 
+/* note: this is very similar to the code for deals page 
+    but i had to duplicate the code and only change the 
+    class name because for this page the width of the images 
+    have to be smaller than those on the deals page
+    otherwise, there are still some classes that are shared 
+    between both class for efficiency  */
+.button-deals {
+    /* Flex container settings */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Text alignment and styling */
+    text-align: center;
+    background-color: #bfbfbf;
+    padding: 20px;
+    color: #fff;
+
+    /* Transition effect on hover */
+    transition: transform 0.3s ease;
+
+    /* Spacing and sizing */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.button-deals:hover {
+    transform: scale(1.05);
+}
+
+/* Image inside the deal button */
+.button-deals img {
+    width: 250px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/*------------------------------------regarding price----------------------------------------------*/
+.total-price {
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 250px;
+}
+/*---------------------------------------cart-----------------------------------------------------------*/
 .cart-container {
     position: fixed;
     top: 0;
@@ -426,23 +483,13 @@ label { /* this is my 'news and update' */
     display: block;
     font-size: 35px;
     font-weight: bold;
-    padding: 80px; /*ultimately this will only be giving padding to top and right*/
+    padding: 80px;
     color: #fff;
-    padding-bottom: unset; /*cz now i want to change the padding size but only for the bottom*/
-    padding-left: 10px; /*to align with grey line*/
-    white-space: nowrap; /* Ensure text stays in one line */
+    padding-bottom: unset;
+    padding-left: 10px;
+    white-space: nowrap;
+    word-wrap: break-word; /* Allow words to break to the next line if they don't fit */
 }
-
-/*------------------------------------regarding price----------------------------------------------*/
-.total-price {
-    color: #fff;
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 250px;
-}
-/*--------------------------------------------------------------------------------------------------*/
 
 .cart-heading + .grey-line-menu {
     margin-bottom: 10px;
@@ -504,14 +551,26 @@ label { /* this is my 'news and update' */
 }
 
 @media (max-width: 600px) {
+    .button-deals img {
+        width: 180px;
+        height: 200px;
+    }
     .cart-container {
-        width: 300px;
+        width: 310px;
+        margin-right: 5px;
     }
     .button-container-menu {
         grid-template-columns: repeat(2, 1fr); /* Set the grid to two columns when the screen is 700px or smaller (2)*/
         font-size: 12px;
     }
-
+    .total-price {
+        margin-left: unset;
+        margin-left: 150px;
+    }
+    .cart-item img {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 /*-- End of menu css ----------------------------------------------------------------------------------------------------*/
@@ -795,7 +854,7 @@ label { /* this is my 'news and update' */
 }
 
 /* Individual deal button */
-.button-deals {
+.button-class-deals {
     /* Flex container settings */
     display: flex;
     flex-direction: column;
@@ -822,19 +881,20 @@ label { /* this is my 'news and update' */
     overflow: hidden;
 }
 
-.button-deals:hover {
+.button-class-deals:hover {
     transform: scale(1.05);
 }
 
 /* Image inside the deal button */
-.button-deals img {
-    max-width: 100%;
-    height: auto;
+.button-class-deals img {
+    width: 250px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
     margin-bottom: 10px;
-    max-height: 250px;
     border-radius: 8px;
     overflow: hidden;
 }
+
 
 /* Body content inside the deal button */
 .body-content-deals {
@@ -851,7 +911,7 @@ label { /* this is my 'news and update' */
 /* Paragraph inside the deal button */
 .body-content-deals p {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Button inside the deal button */
@@ -880,6 +940,9 @@ label { /* this is my 'news and update' */
         display: block; /* Make the button a block element */
         margin: 0 auto; /* Center the button horizontally */
         text-align: center; /* Center the text within the button */
+    }
+    .button-class-deals img {
+        height: 230px;
     }
 }
 
