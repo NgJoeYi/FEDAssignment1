@@ -77,7 +77,7 @@ footer {
         list-style: none;
         padding: 0; /* remove padding on left, right, top, bottom */
         text-align: center; /* Center the list items */
-        font-size: 15px;
+        font-size: 16px;
         font-family: 'Courier New', Courier, monospace;
         margin-left: 80px;
     }
