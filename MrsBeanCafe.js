@@ -43,7 +43,7 @@ function updateCartDisplay() {
 // Function to add an item to the cart --------------------------------------------------------------------
 function addToCart(button) {
     // Get the parent element of the clicked button
-    var parentElement = button.closest('.button-deals');
+    var parentElement = button.closest('.button-class-menu');
     // Extract information about the food item from the parent element
     var foodName = parentElement.querySelector('.food-name').textContent;
     var foodPrice = parseFloat(parentElement.querySelector('.food-price').textContent.replace('$', ''));
@@ -109,15 +109,27 @@ function clearCart() {
     updateCartDisplay();
 }
 
-// Event listener for the subscribe button
-document.getElementById('subscribeButton').addEventListener('click', function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-    // Display an alert for a successful subscription
-    alert('Subscription successful!');
+
+
+
+// Event listener for the subscribe form
+document.getElementById('subscribeForm').addEventListener('submit', function (event) {
+    // Get the email input value
+    var emailInput = document.getElementById('email');
+    var emailValue = emailInput.value;
+
+    // Check if the email contains the '@' symbol
+    if (!emailValue.includes('@')) {
+        alert('Please enter a valid email address with the "@" symbol.');
+        event.preventDefault(); // Prevent form submission
+    } else {
+        // Display an alert for a successful subscription
+        alert('Subscription successful!');
+        event.preventDefault(); // Prevent form submission
+    }
 });
 
-// Event listener for when the DOM content is fully loaded
+// ---------- Event listener for when the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize the slide index for the homepage slideshow
     let slideIndex = 1;
