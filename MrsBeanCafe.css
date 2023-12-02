@@ -545,7 +545,7 @@ label { /* this is my 'news and update' */
     bottom: 20px;
     right: 20px;
     width: 50px; /* Adjust the size as needed */
-    height: 50px;
+    height: 50px; /* same as height so wont stretch image */
     cursor: pointer;
     border-radius: 30PX;
 }
