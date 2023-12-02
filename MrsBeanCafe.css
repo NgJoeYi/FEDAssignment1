@@ -799,7 +799,7 @@ label { /* this is my 'news and update' */
     
     .gray-text-box img {
         width: 80%; /* Make the image responsive */
-        height: auto;
+        height: 30vh;
         max-width: 100%; /* Ensure the image doesn't exceed its natural size */
         object-fit: cover; /* Scale the image while maintaining its aspect ratio */
         margin: 0 auto; /* Center the image horizontally within its container */
@@ -814,11 +814,11 @@ label { /* this is my 'news and update' */
     }
 
     .gray-text-box-content h3 {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .gray-text-box-content p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .custom-button {
